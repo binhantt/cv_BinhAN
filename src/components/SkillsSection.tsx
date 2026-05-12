@@ -17,16 +17,16 @@ export function SkillsSection() {
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ maxWidth: 760, textAlign: 'center' }}>
+              <Box style={{ maxWidth: 900, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
                   03 / Skills
                 </Text>
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2.3rem, 4.2vw, 4rem)', lineHeight: 1 }}
+                  style={{ color: colors.ink, fontSize: 'clamp(2rem, 3.2vw, 3.2rem)', lineHeight: 1.08 }}
                 >
-                  Bộ kỹ năng tập trung vào giao diện, dữ liệu và sản phẩm web.
+                  Kỹ năng web thực tế.
                 </Heading>
               </Box>
             </Reveal>

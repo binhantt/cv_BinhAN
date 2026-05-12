@@ -18,21 +18,21 @@ export function AboutSection() {
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ ...copyStyle, textAlign: 'center' }}>
+              <Box style={{ ...copyStyle, maxWidth: 900, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
-                  02 / About
+                  02 / Giới thiệu
                 </Text>
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2.4rem, 4.6vw, 4.4rem)', lineHeight: 1 }}
+                  style={{ color: colors.ink, fontSize: 'clamp(2rem, 3.2vw, 3.2rem)', lineHeight: 1.08 }}
                 >
-                  Tôi xây dựng sản phẩm web gọn, đẹp và dễ dùng.
+                  Giới thiệu bản thân
                 </Heading>
               </Box>
             </Reveal>
 
-            <Grid columns={{ initial: '1', md: '0.9fr 1.1fr' }} gap="5" align="stretch" width="100%">
+            <Grid columns={{ initial: '1', md: '0.92fr 1.08fr' }} gap="5" align="stretch" width="100%">
               <Reveal direction="left">
                 <Box style={compactVisualStyle}>
                   <PortfolioScene variant="profile" imageUrl={profile.avatarUrl} />
@@ -42,8 +42,8 @@ export function AboutSection() {
               <Reveal direction="right" delay={120}>
                 <Flex
                   direction="column"
-                  gap="5"
-                  p={{ initial: '5', sm: '6' }}
+                  gap="4"
+                  p={{ initial: '4', sm: '5' }}
                   style={{
                     ...outerFrameStyle,
                     background: `${colors.teal}14`,
@@ -58,11 +58,11 @@ export function AboutSection() {
                   </Text>
                 </Flex>
 
-                <Text as="p" size="3" style={{ color: colors.ink, lineHeight: 1.75, margin: 0 }}>
+                <Text as="p" size="3" style={{ color: colors.ink, lineHeight: 1.65, margin: 0 }}>
                   {profile.about}
                 </Text>
 
-                <Grid columns={{ initial: '1', sm: '3' }} gap="3">
+                <Grid columns={{ initial: '1', sm: '3' }} gap="2">
                   {aboutHighlights.map((item) => (
                     <Flex
                       key={item}
@@ -76,7 +76,7 @@ export function AboutSection() {
                       }}
                     >
                       <CheckCircledIcon color={colors.teal} />
-                      <Text size="2" weight="bold" style={{ color: colors.ink }}>
+                      <Text size="2" weight="bold" style={{ color: colors.ink, lineHeight: 1.35 }}>
                         {item}
                       </Text>
                     </Flex>
@@ -90,7 +90,7 @@ export function AboutSection() {
                       Mục tiêu nghề nghiệp
                     </Text>
                   </Flex>
-                  <Text as="p" size="2" style={{ color: colors.ink, lineHeight: 1.7, margin: 0 }}>
+                  <Text as="p" size="2" style={{ color: colors.ink, lineHeight: 1.6, margin: 0 }}>
                     {profile.objective}
                   </Text>
                 </Flex>

@@ -9,7 +9,7 @@ export const colors = {
 export const pageStyle: CSSProperties = {
   minHeight: '100vh',
   margin: '-8px',
-  padding: '8px 0 56px',
+  padding: '88px 0 56px',
   color: colors.ink,
   background: `radial-gradient(circle at 12% 18%, ${colors.teal}18, transparent 28%), radial-gradient(circle at 88% 42%, ${colors.teal}12, transparent 30%), ${colors.amber}`,
 }
@@ -18,8 +18,8 @@ export const sectionStyle: CSSProperties = {
   minHeight: '100svh',
   display: 'flex',
   alignItems: 'center',
-  padding: '112px 0 72px',
-  scrollMarginTop: 120,
+  padding: '24px 0 56px',
+  scrollMarginTop: 96,
 }
 
 export const outerFrameStyle: CSSProperties = {
@@ -30,8 +30,8 @@ export const outerFrameStyle: CSSProperties = {
 
 export const visualStyle: CSSProperties = {
   ...outerFrameStyle,
-  height: 'min(520px, 64svh)',
-  minHeight: 360,
+  height: 'min(500px, 58svh)',
+  minHeight: 320,
   overflow: 'hidden',
 }
 

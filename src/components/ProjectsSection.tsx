@@ -12,16 +12,16 @@ export function ProjectsSection() {
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ maxWidth: 760, textAlign: 'center' }}>
+              <Box style={{ maxWidth: 900, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
                   05 / Work
                 </Text>
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2.3rem, 4.2vw, 4rem)', lineHeight: 1 }}
+                  style={{ color: colors.ink, fontSize: 'clamp(2rem, 3.2vw, 3.2rem)', lineHeight: 1.08 }}
                 >
-                  Một vài sản phẩm có thể đưa vào CV.
+                  Dự án nổi bật.
                 </Heading>
                 <Text as="p" mt="3" style={{ color: colors.ink, lineHeight: 1.7 }}>
                   Mỗi project được viết gọn để người tuyển dụng đọc nhanh trong một màn hình.

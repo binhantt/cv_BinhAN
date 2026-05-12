@@ -10,13 +10,13 @@ export function HeroSection() {
     <Box asChild style={sectionStyle}>
       <section id="home">
         <Container size="4" px={{ initial: '4', sm: '6' }}>
-          <Grid columns={{ initial: '1', md: '0.95fr 1.05fr' }} gap="7" align="center">
+          <Grid columns={{ initial: '1', md: '0.95fr 1.05fr' }} gap="6" align="center">
             <Reveal direction="left">
               <Box style={copyStyle}>
                 <Text as="div" style={kickerStyle}>
                   01 / Home
                 </Text>
-                <Text as="div" mt="5" size="2" weight="bold" style={{ color: colors.teal }}>
+                <Text as="div" mt="4" size="2" weight="bold" style={{ color: colors.teal }}>
                   {profile.eyebrow}
                 </Text>
                 <Box mt="3">
@@ -24,7 +24,7 @@ export function HeroSection() {
                     as="h1"
                     style={{
                       color: colors.ink,
-                      fontSize: 'clamp(3rem, 6vw, 5.7rem)',
+                      fontSize: 'clamp(2.7rem, 5.2vw, 5rem)',
                       lineHeight: 0.98,
                       letterSpacing: 0,
                     }}
@@ -36,7 +36,7 @@ export function HeroSection() {
                     weight="bold"
                     style={{
                       color: colors.teal,
-                      fontSize: 'clamp(2.5rem, 5vw, 4.7rem)',
+                      fontSize: 'clamp(2.3rem, 4.4vw, 4.2rem)',
                       lineHeight: 1,
                       letterSpacing: 0,
                     }}
@@ -44,10 +44,10 @@ export function HeroSection() {
                     {profile.headlineAccent}
                   </Text>
                 </Box>
-                <Text as="p" mt="4" size="4" style={{ color: colors.ink, lineHeight: 1.7 }}>
+                <Text as="p" mt="3" size="4" style={{ color: colors.ink, lineHeight: 1.55 }}>
                   {profile.intro}
                 </Text>
-                <Flex gap="3" mt="6" wrap="wrap">
+                <Flex gap="3" mt="4" wrap="wrap">
                   <Button size="3" asChild style={{ background: colors.teal, color: colors.amber }}>
                     <a href="#about">
                       Xem hồ sơ

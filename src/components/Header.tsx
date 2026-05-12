@@ -3,77 +3,125 @@ import { Box, Button, Container, Flex, Text } from '@radix-ui/themes'
 import { navItems, profile } from '../database/portfolio'
 import { colors, outerFrameStyle } from '../design'
 
+const cvButtonStyle = {
+  background: colors.teal,
+  color: colors.amber,
+  borderRadius: 8,
+  whiteSpace: 'nowrap',
+  boxShadow: `0 12px 28px ${colors.teal}22`,
+} as const
+
 export function Header() {
+  const navPills = (
+    <Flex align="center" justify={{ initial: 'start', md: 'center' }} gap="1" wrap="nowrap" style={{ minWidth: 'max-content' }}>
+      {navItems.map((item) => (
+        <a
+          key={item.href}
+          href={item.href}
+          style={{
+            color: colors.teal,
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            borderRadius: 6,
+            padding: '8px 13px',
+            fontSize: 13,
+            fontWeight: 800,
+            lineHeight: 1,
+          }}
+        >
+          {item.label}
+        </a>
+      ))}
+    </Flex>
+  )
+
   return (
     <Box
       asChild
       style={{
-        position: 'sticky',
-        top: 16,
+        position: 'fixed',
+        top: 6,
+        left: 0,
+        right: 0,
         zIndex: 20,
-        marginTop: 16,
       }}
     >
       <header>
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex
-            align="center"
+            align={{ initial: 'stretch', md: 'center' }}
             justify="between"
-            gap="4"
+            gap="3"
+            direction={{ initial: 'column', md: 'row' }}
             p="3"
             style={{
               ...outerFrameStyle,
-              minHeight: 76,
-              background: colors.amber,
-              boxShadow: `0 18px 50px ${colors.teal}12`,
+              minHeight: 64,
+              background: `${colors.amber}f2`,
+              backdropFilter: 'blur(16px)',
+              boxShadow: `0 18px 48px ${colors.teal}10`,
             }}
           >
-            <Flex align="center" gap="3">
-              <Flex
-                align="center"
-                justify="center"
-                style={{
-                  width: 42,
-                  height: 42,
-                  borderRadius: 8,
-                  background: colors.teal,
-                  color: colors.amber,
-                }}
-              >
-                <FileTextIcon width="19" height="19" />
+            <Flex align="center" justify="between" gap="3" style={{ minWidth: 0 }}>
+              <Flex align="center" gap="3" style={{ minWidth: 0 }}>
+                <Flex
+                  align="center"
+                  justify="center"
+                  style={{
+                    width: 42,
+                    height: 42,
+                    flex: '0 0 auto',
+                    borderRadius: 8,
+                    background: colors.teal,
+                    color: colors.amber,
+                    boxShadow: `0 10px 24px ${colors.teal}24`,
+                  }}
+                >
+                  <FileTextIcon width="19" height="19" />
+                </Flex>
+                <Box style={{ minWidth: 0 }}>
+                  <Text as="div" weight="bold" style={{ color: colors.ink }}>
+                    {profile.name}
+                  </Text>
+                  <Text as="div" size="1" weight="bold" style={{ color: colors.teal }}>
+                    {profile.role}
+                  </Text>
+                </Box>
               </Flex>
-              <Box>
-                <Text as="div" weight="bold" style={{ color: colors.ink }}>
-                  {profile.name}
-                </Text>
-                <Text as="div" size="1" style={{ color: colors.teal }}>
-                  {profile.role}
-                </Text>
+
+              <Box display={{ initial: 'block', md: 'none' }}>
+                <Button size="2" style={cvButtonStyle}>
+                  <DownloadIcon />
+                  Tải CV
+                </Button>
               </Box>
             </Flex>
 
-            <Box asChild display={{ initial: 'none', md: 'block' }}>
-              <nav aria-label="Main navigation">
-                <Flex align="center" justify="center" gap="3" wrap="wrap">
-                  {navItems.map((item) => (
-                    <Button
-                      key={item.href}
-                      asChild
-                      variant="ghost"
-                      size="2"
-                      style={{ color: colors.teal, whiteSpace: 'nowrap' }}
-                    >
-                      <a href={item.href}>{item.label}</a>
-                    </Button>
-                  ))}
-                </Flex>
+            <Box asChild display={{ initial: 'none', md: 'block' }} style={{ flex: 1 }}>
+              <nav aria-label="Main navigation" style={{ display: 'flex', justifyContent: 'center' }}>
+                {navPills}
               </nav>
             </Box>
 
-            <Button size="2" style={{ background: colors.teal, color: colors.amber, whiteSpace: 'nowrap' }}>
-              <DownloadIcon />
-              Tải CV
-            </Button>
+            <Box display={{ initial: 'none', md: 'block' }}>
+              <Button size="2" style={cvButtonStyle}>
+                <DownloadIcon />
+                Tải CV
+              </Button>
+            </Box>
+
+            <Box asChild display={{ initial: 'block', md: 'none' }}>
+              <nav
+                aria-label="Mobile navigation"
+                style={{
+                  overflowX: 'auto',
+                  scrollbarWidth: 'none',
+                  WebkitOverflowScrolling: 'touch',
+                }}
+              >
+                {navPills}
+              </nav>
+            </Box>
           </Flex>
         </Container>
       </header>

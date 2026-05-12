@@ -1,9 +1,8 @@
 export const profile = {
   name: 'Bình An',
   role: 'Lập trình viên Frontend',
-  avatarUrl:
-    'https://chiemtaimobile.vn/images/companies/1/%E1%BA%A2nh%20Blog/avatar-facebook-dep/Anh-avatar-hoat-hinh-de-thuong-xinh-xan.jpg?1704788263223',
-  homePhotoUrl: '/profile-photo.jpg',
+  avatarUrl: '/image-removebg-preview.png',
+  homePhotoUrl: '/image-removebg-preview.png',
   cvImageUrl: '/cv-image.jpg',
   headline: 'Frontend Developer',
   headlineAccent: 'Bình An Portfolio',
@@ -23,11 +22,11 @@ export const profile = {
 
 export const navItems = [
   { label: 'Home', href: '#home' },
-  { label: 'Giới thiệu', href: '#about' },
-  { label: 'Kỹ năng', href: '#skills' },
-  { label: 'Học vấn', href: '#academic' },
+  { label: 'Tôi', href: '#about' },
+  { label: 'Skill', href: '#skills' },
+  { label: 'Học', href: '#academic' },
   { label: 'Dự án', href: '#projects' },
-  { label: 'Liên hệ', href: '#contact' },
+  { label: 'LH', href: '#contact' },
 ]
 
 export const skillGroups = [
@@ -96,6 +95,13 @@ export const projects = [
     imageUrl: 'https://binhan.vercel.app/sever2.png',
     demoUrl: 'https://sever-react-rgp0cuaj9-binhantts-projects.vercel.app/',
     githubUrl: 'https://github.com/binhantt/sever_react',
+  },
+  {
+    name: 'ChatApp Matching Platform',
+    stack: 'Next.js, React, NestJS, TypeORM, PostgreSQL, JWT, Socket.IO',
+    detail: 'Ứng dụng chat/matching có auth, hồ sơ, ghép đôi, nhắn tin, report và admin moderation.',
+    imageUrl: '/chat.png',
+    githubUrl: 'https://github.com/binhantt/chat',
   },
   {
     name: 'Nuxt Minimal Starter Website',
