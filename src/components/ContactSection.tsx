@@ -1,4 +1,4 @@
-import { ArrowRightIcon, EnvelopeClosedIcon, GitHubLogoIcon, MobileIcon } from '@radix-ui/react-icons'
+import { ArrowRightIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
 import { Box, Button, Container, Flex, Grid, Heading, Text } from '@radix-ui/themes'
 import { profile } from '../database/portfolio'
 import { colors, compactVisualStyle, kickerStyle, outerFrameStyle, sectionStyle } from '../design'
@@ -42,32 +42,12 @@ export function ContactSection() {
                     {profile.email}
                   </a>
                 </Flex>
-                <Flex align="center" gap="3">
-                  <MobileIcon color={colors.teal} />
-                  <a href={`tel:${profile.phone.replaceAll('.', '')}`} style={{ color: colors.ink, textDecoration: 'none', fontWeight: 700 }}>
-                    {profile.phone}
-                  </a>
-                </Flex>
-                <Flex align="center" gap="3">
-                  <GitHubLogoIcon color={colors.teal} />
-                  <a href={profile.github} target="_blank" rel="noreferrer" style={{ color: colors.ink, textDecoration: 'none', fontWeight: 700 }}>
-                    GitHub
-                  </a>
-                </Flex>
-                <Text as="p" style={{ color: colors.ink, lineHeight: 1.7 }}>
-                  {profile.location}
-                </Text>
 
                 <Flex gap="3" mt="4" wrap="wrap">
                   <Button size="3" asChild style={{ background: colors.teal, color: colors.amber }}>
                     <a href={`mailto:${profile.email}`}>
                       Liên hệ ngay
                       <ArrowRightIcon />
-                    </a>
-                  </Button>
-                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
-                    <a href={profile.facebook} target="_blank" rel="noreferrer">
-                      Facebook
                     </a>
                   </Button>
                 </Flex>
