@@ -5,6 +5,7 @@ export const profile = {
       '/image-removebg-preview.png',
   homePhotoUrl: '/image-removebg-preview.png',
   cvImageUrl: '/cv-image.jpg',
+  cvUrl: 'https://drive.google.com/file/d/11C4dzqYtXHewVmbw9pjZMxMsLe8x1mLq/view?usp=sharing',
   headline: 'Frontend Developer',
   headlineAccent: 'Bình An Portfolio',
   eyebrow: 'Sẵn sàng nhận việc',
