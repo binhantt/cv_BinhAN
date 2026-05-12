@@ -20,6 +20,7 @@ export const profile = {
   location: 'Thành phố Hồ Chí Minh, Việt Nam',
   github: 'https://github.com/binhantt',
   facebook: 'https://web.facebook.com/profile.php?id=100055981183341',
+  zalo: 'https://zalo.me/0329104253',
 }
 
 export const navItems = [

@@ -1,4 +1,4 @@
-import { ArrowRightIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import { ArrowRightIcon, EnvelopeClosedIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Box, Button, Container, Flex, Grid, Heading, Text } from '@radix-ui/themes'
 import { profile } from '../database/portfolio'
 import { colors, compactVisualStyle, kickerStyle, outerFrameStyle, sectionStyle } from '../design'
@@ -48,6 +48,22 @@ export function ContactSection() {
                     <a href={`mailto:${profile.email}`}>
                       Liên hệ ngay
                       <ArrowRightIcon />
+                    </a>
+                  </Button>
+                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
+                    <a href={profile.facebook} target="_blank" rel="noreferrer">
+                      Facebook
+                    </a>
+                  </Button>
+                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
+                    <a href={profile.zalo} target="_blank" rel="noreferrer">
+                      Zalo
+                    </a>
+                  </Button>
+                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
+                    <a href={profile.github} target="_blank" rel="noreferrer">
+                      <GitHubLogoIcon />
+                      GitHub
                     </a>
                   </Button>
                 </Flex>
