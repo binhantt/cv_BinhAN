@@ -8,7 +8,7 @@ export const profile = {
   cvUrl: 'https://drive.google.com/file/d/11C4dzqYtXHewVmbw9pjZMxMsLe8x1mLq/view?usp=sharing',
   headline: 'Frontend Developer',
   headlineAccent: 'Bình An Portfolio',
-  eyebrow: 'Sẵn sàng nhận việc',
+  eyebrow: 'Sẵn sàng nhận việc  ',
   intro:
     'Portfolio cá nhân của Bình An, lập trình viên Frontend yêu thích xây dựng giao diện web đẹp, thân thiện và tương thích trên nhiều thiết bị.',
   about:
