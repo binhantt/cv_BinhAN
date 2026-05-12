@@ -46,7 +46,7 @@ export function Header() {
         zIndex: 20,
       }}
     >
-      <header>
+      <header className="portfolio-header">
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex
             align={{ initial: 'stretch', md: 'center' }}
@@ -96,28 +96,32 @@ export function Header() {
                 </Box>
               </Flex>
 
-              <Box display={{ initial: 'block', md: 'none' }}>
-                <Button size="2" style={cvButtonStyle}>
-                  <DownloadIcon />
-                  Tải CV
+              <Box className="mobile-cv-button">
+                <Button size="2" asChild style={cvButtonStyle}>
+                  <a href={profile.cvUrl} target="_blank" rel="noreferrer">
+                    <DownloadIcon />
+                    Xem CV
+                  </a>
                 </Button>
               </Box>
             </Flex>
 
-            <Box asChild display={{ initial: 'none', md: 'block' }} style={{ flex: 1 }}>
-              <nav aria-label="Main navigation" style={{ display: 'flex', justifyContent: 'center' }}>
+            <Box asChild className="desktop-nav" style={{ flex: 1 }}>
+              <nav aria-label="Main navigation">
                 {navPills}
               </nav>
             </Box>
 
-            <Box display={{ initial: 'none', md: 'block' }}>
-              <Button size="2" style={cvButtonStyle}>
-                <DownloadIcon />
-                Tải CV
+            <Box className="desktop-cv-button">
+              <Button size="2" asChild style={cvButtonStyle}>
+                <a href={profile.cvUrl} target="_blank" rel="noreferrer">
+                  <DownloadIcon />
+                  Xem CV
+                </a>
               </Button>
             </Box>
 
-            <Box asChild display={{ initial: 'block', md: 'none' }}>
+            <Box asChild className="mobile-nav">
               <nav
                 aria-label="Mobile navigation"
                 style={{

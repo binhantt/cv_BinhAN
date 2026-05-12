@@ -19,7 +19,8 @@ export function ProjectsSection() {
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2rem, 3.2vw, 3.2rem)', lineHeight: 1.08 }}
+                  className="section-title"
+                  style={{ color: colors.ink, lineHeight: 1.08 }}
                 >
                   Dự án nổi bật.
                 </Heading>
@@ -41,7 +42,7 @@ export function ProjectsSection() {
                       background: `${colors.teal}10`,
                     }}
                   >
-                  <Box style={{ height: 260, minHeight: 240 }}>
+                  <Box className="scene-panel">
                     <PortfolioScene variant="projectImage" imageUrl={project.imageUrl} />
                   </Box>
 

@@ -25,7 +25,8 @@ export function AboutSection() {
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2rem, 3.2vw, 3.2rem)', lineHeight: 1.08 }}
+                  className="section-title"
+                  style={{ color: colors.ink, lineHeight: 1.08 }}
                 >
                   Giới thiệu bản thân
                 </Heading>

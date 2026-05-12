@@ -11,7 +11,7 @@ import { colors, pageStyle } from './design'
 function App() {
   return (
     <Theme accentColor="green" grayColor="gray" radius="small" scaling="100%">
-      <Box style={pageStyle}>
+      <Box className="site-shell" style={pageStyle}>
         <Box
           aria-hidden="true"
           display={{ initial: 'none', md: 'block' }}

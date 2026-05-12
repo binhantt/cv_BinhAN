@@ -19,7 +19,8 @@ export function ContactSection() {
                 <Heading
                   as="h2"
                   mt="3"
-                  style={{ color: colors.ink, fontSize: 'clamp(2.3rem, 4.2vw, 4rem)', lineHeight: 1 }}
+                  className="contact-title"
+                  style={{ color: colors.ink, lineHeight: 1 }}
                 >
                   Sẵn sàng gửi CV, portfolio hoặc trao đổi về cơ hội mới.
                 </Heading>
