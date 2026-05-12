@@ -5,6 +5,12 @@ import { colors, compactVisualStyle, kickerStyle, outerFrameStyle, sectionStyle 
 import { PortfolioScene } from './PortfolioScene'
 import { Reveal } from './Reveal'
 
+const contactLinks = [
+  { label: 'Facebook', href: profile.facebook, mark: 'f' },
+  { label: 'Zalo', href: profile.zalo, mark: 'Z' },
+  { label: 'GitHub', href: profile.github, icon: <GitHubLogoIcon /> },
+]
+
 export function ContactSection() {
   return (
     <Box asChild style={sectionStyle}>
@@ -35,38 +41,44 @@ export function ContactSection() {
               </Reveal>
 
               <Reveal direction="right" delay={120}>
-                <Flex direction="column" gap="4" p={{ initial: '4', sm: '6' }} style={{ ...outerFrameStyle, background: `${colors.teal}10` }}>
-                <Flex align="center" gap="3">
-                  <EnvelopeClosedIcon color={colors.teal} />
-                  <a href={`mailto:${profile.email}`} style={{ color: colors.ink, textDecoration: 'none', fontWeight: 700 }}>
-                    {profile.email}
-                  </a>
-                </Flex>
+                <Flex
+                  direction="column"
+                  gap="5"
+                  p={{ initial: '4', sm: '6' }}
+                  className="contact-card"
+                  style={{ ...outerFrameStyle, background: `${colors.teal}10` }}
+                >
+                  <Box>
+                    <Text as="div" className="contact-card-title">
+                      Kết nối nhanh
+                    </Text>
+                    <Text as="p" className="contact-card-copy">
+                      Gửi email hoặc chọn kênh phù hợp để trao đổi về CV, dự án và cơ hội Frontend.
+                    </Text>
+                  </Box>
 
-                <Flex gap="3" mt="4" wrap="wrap">
-                  <Button size="3" asChild style={{ background: colors.teal, color: colors.amber }}>
-                    <a href={`mailto:${profile.email}`}>
-                      Liên hệ ngay
-                      <ArrowRightIcon />
-                    </a>
-                  </Button>
-                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
-                    <a href={profile.facebook} target="_blank" rel="noreferrer">
-                      Facebook
-                    </a>
-                  </Button>
-                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
-                    <a href={profile.zalo} target="_blank" rel="noreferrer">
-                      Zalo
-                    </a>
-                  </Button>
-                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
-                    <a href={profile.github} target="_blank" rel="noreferrer">
-                      <GitHubLogoIcon />
-                      GitHub
-                    </a>
-                  </Button>
-                </Flex>
+                  <a href={`mailto:${profile.email}`} className="contact-email">
+                    <span className="contact-email-icon">
+                      <EnvelopeClosedIcon />
+                    </span>
+                    <span>{profile.email}</span>
+                  </a>
+
+                  <Flex gap="3" wrap="wrap" className="contact-actions">
+                    <Button size="3" asChild className="contact-primary">
+                      <a href={`mailto:${profile.email}`}>
+                        Liên hệ ngay
+                        <ArrowRightIcon />
+                      </a>
+                    </Button>
+
+                    {contactLinks.map((item) => (
+                      <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className="contact-link">
+                        <span className="contact-link-icon">{item.icon ?? item.mark}</span>
+                        <span>{item.label}</span>
+                      </a>
+                    ))}
+                  </Flex>
                 </Flex>
               </Reveal>
             </Grid>
