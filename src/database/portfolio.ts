@@ -1,10 +1,10 @@
 export const profile = {
   name: 'Bình An',
   role: 'Lập trình viên Frontend',
-  avatarUrl: '/image-removebg-preview.png',
+  avatarUrl:
+      '/image-removebg-preview.png',
   homePhotoUrl: '/image-removebg-preview.png',
   cvImageUrl: '/cv-image.jpg',
-  cvUrl: 'https://drive.google.com/file/d/11C4dzqYtXHewVmbw9pjZMxMsLe8x1mLq/view?usp=sharing',
   headline: 'Frontend Developer',
   headlineAccent: 'Bình An Portfolio',
   eyebrow: 'Sẵn sàng nhận việc',
@@ -14,7 +14,7 @@ export const profile = {
     'Xin chào! Tôi là Bình An, một lập trình viên Frontend đang sinh sống và làm việc tại Thành phố Hồ Chí Minh. Tôi đam mê tạo ra những trải nghiệm web đẹp, rõ ràng và thân thiện với người dùng.',
   objective:
     'Mục tiêu của tôi là phát triển thành Frontend Developer có khả năng xây dựng sản phẩm thực tế, kết nối tốt với backend, tối ưu trải nghiệm người dùng và luôn học hỏi công nghệ mới.',
-  email: 'doan44503@gmail.com',
+  email: 'doan44503@gmail.com' + ' | ' + 'devbinhan@gmail.com',
   phone: '0329.104.253',
   location: 'Thành phố Hồ Chí Minh, Việt Nam',
   github: 'https://github.com/binhantt',
@@ -23,11 +23,11 @@ export const profile = {
 
 export const navItems = [
   { label: 'Home', href: '#home' },
-  { label: 'Tôi', href: '#about' },
-  { label: 'Skill', href: '#skills' },
-  { label: 'Học', href: '#academic' },
+  { label: 'Giới thiệu', href: '#about' },
+  { label: 'Kỹ năng', href: '#skills' },
+  { label: 'Học vấn', href: '#academic' },
   { label: 'Dự án', href: '#projects' },
-  { label: 'LH', href: '#contact' },
+  { label: 'Liên hệ', href: '#contact' },
 ]
 
 export const skillGroups = [
@@ -96,13 +96,6 @@ export const projects = [
     imageUrl: 'https://binhan.vercel.app/sever2.png',
     demoUrl: 'https://sever-react-rgp0cuaj9-binhantts-projects.vercel.app/',
     githubUrl: 'https://github.com/binhantt/sever_react',
-  },
-  {
-    name: 'ChatApp Matching Platform',
-    stack: 'Next.js, React, NestJS, TypeORM, PostgreSQL, JWT, Socket.IO',
-    detail: 'Ứng dụng chat/matching có auth, hồ sơ, ghép đôi, nhắn tin, report và admin moderation.',
-    imageUrl: '/chat.png',
-    githubUrl: 'https://github.com/binhantt/chat',
   },
   {
     name: 'Nuxt Minimal Starter Website',
