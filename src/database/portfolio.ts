@@ -65,6 +65,14 @@ export const learnedTopics = [
 
 export const projects = [
   {
+    name: 'ChatApp Matching Platform',
+    stack: 'Next.js, React, NestJS, TypeORM, PostgreSQL, JWT, Socket.IO',
+    detail:
+      'Website chat/matching có đăng nhập, hồ sơ người dùng, ghép đôi, nhắn tin real-time, report và khu vực admin moderation.',
+    imageUrl: '/chat.png',
+    githubUrl: 'https://github.com/binhantt/chat',
+  },
+  {
     name: 'Vue-AnatonLandingPage',
     stack: 'HTML, CSS, JavaScript, Tailwind CSS',
     detail:
