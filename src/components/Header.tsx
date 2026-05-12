@@ -1,4 +1,4 @@
-import { DownloadIcon, FileTextIcon } from '@radix-ui/react-icons'
+import { DownloadIcon } from '@radix-ui/react-icons'
 import { Box, Button, Container, Flex, Text } from '@radix-ui/themes'
 import { navItems, profile } from '../database/portfolio'
 import { colors, outerFrameStyle } from '../design'
@@ -75,9 +75,16 @@ export function Header() {
                     background: colors.teal,
                     color: colors.amber,
                     boxShadow: `0 10px 24px ${colors.teal}24`,
+                    overflow: 'hidden',
                   }}
                 >
-                  <FileTextIcon width="19" height="19" />
+                  <img
+                    src="/logo.svg"
+                    alt={`${profile.name} logo`}
+                    width="42"
+                    height="42"
+                    style={{ display: 'block', width: '100%', height: '100%' }}
+                  />
                 </Flex>
                 <Box style={{ minWidth: 0 }}>
                   <Text as="div" weight="bold" style={{ color: colors.ink }}>
