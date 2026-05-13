@@ -344,6 +344,70 @@ main .rt-Container {
   background: #f7fff8;
 }
 
+.contact-channel-grid {
+  width: 100%;
+}
+
+.contact-channel-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  min-height: 62px;
+  padding: 12px;
+  color: #07130d;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  border: 1px solid rgba(22, 163, 74, 0.24);
+  border-radius: 8px;
+  background: rgba(247, 255, 248, 0.78);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.contact-channel-card:hover,
+.contact-channel-card.is-active {
+  border-color: rgba(22, 163, 74, 0.58);
+  background: rgba(22, 163, 74, 0.12);
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.1);
+}
+
+.contact-channel-detail {
+  padding: 18px;
+  border: 1px solid rgba(22, 163, 74, 0.28);
+  border-radius: 8px;
+  background: rgba(247, 255, 248, 0.82);
+}
+
+.contact-channel-title {
+  color: #07130d;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.contact-channel-copy {
+  margin: 8px 0 0;
+  color: rgba(7, 19, 13, 0.72);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.contact-channel-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: #16a34a;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 @media (max-width: 1023px) {
   html {
     scroll-padding-top: 150px;
@@ -603,6 +667,10 @@ main .rt-Container {
   .contact-link {
     width: 100%;
     min-width: 0;
+  }
+
+  .contact-channel-card {
+    min-height: 56px;
   }
 
   .contact-link,

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { ArrowRightIcon, EnvelopeClosedIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Box, Button, Container, Flex, Grid, Heading, Text } from '@radix-ui/themes'
 import { profile } from '../database/portfolio'
@@ -5,20 +6,40 @@ import { colors, compactVisualStyle, kickerStyle, outerFrameStyle, sectionStyle 
 import { PortfolioScene } from './PortfolioScene'
 import { Reveal } from './Reveal'
 
-const contactLinks = [
-  { label: 'Facebook', href: profile.facebook, mark: 'f' },
-  { label: 'Zalo', href: profile.zalo, mark: 'Z' },
-  { label: 'GitHub', href: profile.github, icon: <GitHubLogoIcon /> },
+const contactChannels = [
+  {
+    label: 'Facebook',
+    href: profile.facebook,
+    mark: 'f',
+    title: 'Facebook cá nhân',
+    detail: 'Kênh phù hợp để xem hoạt động cá nhân và nhắn tin nhanh về cơ hội việc làm.',
+  },
+  {
+    label: 'Zalo',
+    href: profile.zalo,
+    mark: 'Z',
+    title: 'Zalo liên hệ nhanh',
+    detail: `Nhắn trực tiếp qua số ${profile.phone} để trao đổi nhanh về CV, dự án hoặc lịch phỏng vấn.`,
+  },
+  {
+    label: 'GitHub',
+    href: profile.github,
+    icon: <GitHubLogoIcon />,
+    title: 'GitHub dự án',
+    detail: 'Nơi xem source code, project cá nhân và cách triển khai sản phẩm thực tế.',
+  },
 ]
 
 export function ContactSection() {
+  const [selectedChannel, setSelectedChannel] = useState(contactChannels[0])
+
   return (
     <Box asChild style={sectionStyle}>
       <section id="contact">
-        <Container size="3" px={{ initial: '4', sm: '6' }}>
+        <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ maxWidth: 720, textAlign: 'center' }}>
+              <Box style={{ maxWidth: 980, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
                   06 / Contact
                 </Text>
@@ -33,7 +54,7 @@ export function ContactSection() {
               </Box>
             </Reveal>
 
-            <Grid columns={{ initial: '1', md: '0.85fr 1.15fr' }} gap="5" align="stretch" width="100%">
+            <Grid columns={{ initial: '1', md: '0.9fr 1.1fr' }} gap="5" align="stretch" width="100%">
               <Reveal direction="left">
                 <Box className="compact-visual" style={compactVisualStyle}>
                   <PortfolioScene variant="contact" />
@@ -71,14 +92,34 @@ export function ContactSection() {
                         <ArrowRightIcon />
                       </a>
                     </Button>
+                  </Flex>
 
-                    {contactLinks.map((item) => (
-                      <a key={item.label} href={item.href} target="_blank" rel="noreferrer" className="contact-link">
+                  <Grid columns={{ initial: '1', sm: '3' }} gap="3" className="contact-channel-grid">
+                    {contactChannels.map((item) => (
+                      <button
+                        key={item.label}
+                        type="button"
+                        className={`contact-channel-card${selectedChannel.label === item.label ? ' is-active' : ''}`}
+                        onClick={() => setSelectedChannel(item)}
+                      >
                         <span className="contact-link-icon">{item.icon ?? item.mark}</span>
                         <span>{item.label}</span>
-                      </a>
+                      </button>
                     ))}
-                  </Flex>
+                  </Grid>
+
+                  <Box className="contact-channel-detail">
+                    <Text as="div" weight="bold" className="contact-channel-title">
+                      {selectedChannel.title}
+                    </Text>
+                    <Text as="p" className="contact-channel-copy">
+                      {selectedChannel.detail}
+                    </Text>
+                    <a href={selectedChannel.href} target="_blank" rel="noreferrer" className="contact-channel-open">
+                      Mở {selectedChannel.label}
+                      <ArrowRightIcon />
+                    </a>
+                  </Box>
                 </Flex>
               </Reveal>
             </Grid>
