@@ -10,8 +10,10 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 132px;
-  overflow-x: hidden;
+  scroll-padding-top: 134px;
+  min-height: 100%;
+  overflow-x: clip;
+  overflow-y: auto;
 }
 
 body {
@@ -19,9 +21,16 @@ body {
   min-width: 320px;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  min-height: 100%;
+  overflow-x: clip;
+  overflow-y: auto;
   background: #f7fff8;
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+#root {
+  min-height: 100%;
+  overflow-x: clip;
 }
 
 img,
@@ -38,7 +47,9 @@ a {
   position: relative;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden;
+  min-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .site-shell::before {
@@ -56,12 +67,13 @@ a {
 .site-main {
   position: relative;
   z-index: 1;
+  overflow: visible;
 }
 
 section[id] {
   position: relative;
   z-index: 0;
-  scroll-margin-top: 132px;
+  scroll-margin-top: 134px;
 }
 
 section[id] > .rt-Container {
@@ -93,6 +105,10 @@ main .rt-Container {
   justify-content: center;
 }
 
+.header-bar {
+  position: relative;
+}
+
 .desktop-cv-button {
   display: block;
 }
@@ -111,8 +127,23 @@ main .rt-Container {
   max-width: none;
 }
 
+@media (min-width: 768px) {
+  .desktop-nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: min(640px, calc(100% - 360px));
+  }
+
+  .desktop-nav .nav-pills {
+    justify-content: center;
+  }
+}
+
 .hero-section {
-  padding-top: 56px;
+  padding-top: 100px !important;
 }
 
 .hero-copy {
@@ -175,8 +206,9 @@ main .rt-Container {
 }
 
 .hero-visual {
-  height: 440px;
+  height: min(420px, calc(100dvh - 190px));
   min-height: 320px;
+  overflow: hidden;
 }
 
 .hero-visual-3d {
@@ -187,6 +219,15 @@ main .rt-Container {
 .section-title {
   font-size: 3rem;
   line-height: 1.08;
+}
+
+.section-heading {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.section-heading > * {
+  margin-inline: auto;
 }
 
 .contact-title {
@@ -430,7 +471,7 @@ main .rt-Container {
   }
 
   .hero-section {
-    padding-top: 80px;
+    padding-top: 148px !important;
   }
 
   .hero-copy {
@@ -456,7 +497,7 @@ main .rt-Container {
   }
 
   .hero-visual {
-    height: 400px;
+    height: min(380px, calc(100dvh - 190px));
   }
 
   .section-title,
@@ -477,7 +518,7 @@ main .rt-Container {
 
 @media (max-width: 767px) {
   html {
-    scroll-padding-top: 156px;
+    scroll-padding-top: 160px;
   }
 
   body {
@@ -491,7 +532,7 @@ main .rt-Container {
   }
 
   section[id] {
-    scroll-margin-top: 156px;
+    scroll-margin-top: 160px;
   }
 
   .portfolio-header {
@@ -532,7 +573,7 @@ main .rt-Container {
   }
 
   .hero-section {
-    padding-top: 96px;
+    padding-top: 156px !important;
   }
 
   .hero-title {
@@ -681,11 +722,11 @@ main .rt-Container {
 
 @media (max-width: 479px) {
   html {
-    scroll-padding-top: 148px;
+    scroll-padding-top: 154px;
   }
 
   section[id] {
-    scroll-margin-top: 148px;
+    scroll-margin-top: 154px;
   }
 
   .portfolio-header {
@@ -698,7 +739,7 @@ main .rt-Container {
   }
 
   .hero-section {
-    padding-top: 90px;
+    padding-top: 150px !important;
   }
 
   .hero-copy {

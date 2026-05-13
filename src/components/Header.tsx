@@ -54,6 +54,7 @@ export function Header() {
             gap="3"
             direction={{ initial: 'column', md: 'row' }}
             p={{ initial: '2', md: '3' }}
+            className="header-bar"
             style={{
               ...outerFrameStyle,
               minHeight: 60,

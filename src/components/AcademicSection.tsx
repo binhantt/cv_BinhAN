@@ -12,7 +12,7 @@ export function AcademicSection() {
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ maxWidth: 900, textAlign: 'center' }}>
+              <Box className="section-heading" style={{ maxWidth: 900, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
                   04 / Study
                 </Text>

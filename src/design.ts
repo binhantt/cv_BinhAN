@@ -8,7 +8,7 @@ export const colors = {
 
 export const pageStyle: CSSProperties = {
   minHeight: '100vh',
-  padding: '76px 0 56px',
+  padding: '0 0 56px',
   color: colors.ink,
   background: `
     linear-gradient(90deg, rgba(22, 163, 74, 0.07) 1px, transparent 1px),
@@ -25,8 +25,8 @@ export const sectionStyle: CSSProperties = {
   minHeight: 'auto',
   display: 'flex',
   alignItems: 'center',
-  padding: '64px 0',
-  scrollMarginTop: 132,
+  padding: '48px 0',
+  scrollMarginTop: 134,
 }
 
 export const outerFrameStyle: CSSProperties = {

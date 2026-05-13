@@ -541,7 +541,7 @@ export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; i
     const skillVariants: SceneVariant[] = ['skillFrontend', 'skillBackend', 'skillData']
     const wideScreenVariants: SceneVariant[] = ['projectImage', 'skillFrontend']
     const baseScale =
-      variant === 'cv' ? 0.92 : variant === 'heroPhoto' ? 1.58 : variant === 'profile' ? 1.34 : variant === 'projectImage' ? 1.22 : skillVariants.includes(variant) ? 1.34 : 1.08
+      variant === 'cv' ? 0.92 : variant === 'heroPhoto' ? 1.42 : variant === 'profile' ? 1.34 : variant === 'projectImage' ? 1.22 : skillVariants.includes(variant) ? 1.34 : 1.08
     group.scale.setScalar(baseScale)
 
     const keyLight = new THREE.DirectionalLight(colors.amber, 3.4)

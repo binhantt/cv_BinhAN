@@ -18,7 +18,7 @@ export function AboutSection() {
         <Container size="4" px={{ initial: '4', sm: '6' }}>
           <Flex direction="column" align="center" gap="6">
             <Reveal>
-              <Box style={{ ...copyStyle, maxWidth: 900, textAlign: 'center' }}>
+              <Box className="section-heading" style={{ ...copyStyle, maxWidth: 900, textAlign: 'center' }}>
                 <Text as="div" style={kickerStyle}>
                   02 / Giới thiệu
                 </Text>
