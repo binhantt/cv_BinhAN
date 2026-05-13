@@ -19,29 +19,29 @@ export function HeroSection() {
                 <Text as="div" mt="4" size="2" weight="bold" style={{ color: colors.teal }}>
                   {profile.eyebrow}
                 </Text>
-                <Box mt="3">
+                <Box mt="3" className="hero-heading-block">
                   <Heading
                     as="h1"
                     style={{
                       color: colors.ink,
-                      lineHeight: 0.98,
                       letterSpacing: 0,
                     }}
                     className="hero-title"
                   >
-                    {profile.headline}
+                    <span className="hero-title-line">Frontend</span>
+                    <span className="hero-title-line hero-title-line-accent">Developer</span>
                   </Heading>
                   <Text
                     as="div"
                     weight="bold"
                     style={{
-                      color: colors.teal,
-                      lineHeight: 1,
+                      color: colors.ink,
                       letterSpacing: 0,
                     }}
                     className="hero-accent"
                   >
-                    {profile.headlineAccent}
+                    <span>{profile.headlineAccent}</span>
+                    <small>React / Vue / Responsive UI</small>
                   </Text>
                 </Box>
                 <Text as="p" mt="3" size="4" className="hero-intro" style={{ color: colors.ink, lineHeight: 1.55 }}>
@@ -62,8 +62,10 @@ export function HeroSection() {
             </Reveal>
 
             <Reveal direction="right" delay={120}>
-              <Box className="hero-visual" style={visualStyle}>
-                <PortfolioScene variant="heroPhoto" imageUrl={profile.homePhotoUrl} />
+              <Box className="hero-visual" style={visualStyle} display={{ initial: 'none', md: 'block' }}>
+                <Box className="hero-visual-3d">
+                  <PortfolioScene variant="heroPhoto" imageUrl={profile.homePhotoUrl} />
+                </Box>
               </Box>
             </Reveal>
           </Grid>

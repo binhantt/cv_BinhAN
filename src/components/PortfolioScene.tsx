@@ -539,9 +539,10 @@ export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; i
     group.add(floor)
 
     const skillVariants: SceneVariant[] = ['skillFrontend', 'skillBackend', 'skillData']
-    group.scale.setScalar(
-      variant === 'cv' ? 0.92 : variant === 'heroPhoto' ? 1 : variant === 'projectImage' ? 0.96 : skillVariants.includes(variant) ? 1.34 : 1.08,
-    )
+    const wideScreenVariants: SceneVariant[] = ['projectImage', 'skillFrontend']
+    const baseScale =
+      variant === 'cv' ? 0.92 : variant === 'heroPhoto' ? 1.58 : variant === 'profile' ? 1.34 : variant === 'projectImage' ? 1.22 : skillVariants.includes(variant) ? 1.34 : 1.08
+    group.scale.setScalar(baseScale)
 
     const keyLight = new THREE.DirectionalLight(colors.amber, 3.4)
     keyLight.position.set(3.6, 5.2, 5)
@@ -561,6 +562,12 @@ export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; i
       const height = mount.clientHeight
       renderer.setSize(width, height, false)
       camera.aspect = width / height
+      const mobileScale = width < 360 ? 0.62 : width < 480 ? 0.72 : width < 768 ? 0.86 : 1
+      const heroScale = variant === 'heroPhoto' ? Math.max(mobileScale, 0.7) : Math.max(mobileScale, wideScreenVariants.includes(variant) ? 0.86 : 0.76)
+      group.scale.setScalar(baseScale * heroScale)
+      group.position.x = 0
+      group.position.y = variant === 'heroPhoto' && width < 480 ? -0.02 : 0
+      camera.position.z = width < 480 ? 8.4 : width < 768 ? 7.9 : 7.4
       camera.updateProjectionMatrix()
     }
 

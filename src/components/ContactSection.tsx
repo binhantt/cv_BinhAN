@@ -35,7 +35,7 @@ export function ContactSection() {
 
             <Grid columns={{ initial: '1', md: '0.85fr 1.15fr' }} gap="5" align="stretch" width="100%">
               <Reveal direction="left">
-                <Box style={compactVisualStyle}>
+                <Box className="compact-visual" style={compactVisualStyle}>
                   <PortfolioScene variant="contact" />
                 </Box>
               </Reveal>

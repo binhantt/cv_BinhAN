@@ -33,9 +33,9 @@ export function AboutSection() {
               </Box>
             </Reveal>
 
-            <Grid columns={{ initial: '1', md: '0.92fr 1.08fr' }} gap="5" align="stretch" width="100%">
+            <Grid columns={{ initial: '1', md: '0.92fr 1.08fr' }} gap="5" align="stretch" width="100%" className="about-layout">
               <Reveal direction="left">
-                <Box style={compactVisualStyle}>
+                <Box className="compact-visual about-visual" style={compactVisualStyle}>
                   <PortfolioScene variant="profile" imageUrl={profile.avatarUrl} />
                 </Box>
               </Reveal>
@@ -45,6 +45,7 @@ export function AboutSection() {
                   direction="column"
                   gap="4"
                   p={{ initial: '4', sm: '5' }}
+                  className="content-card about-card"
                   style={{
                     ...outerFrameStyle,
                     background: `${colors.teal}14`,
@@ -63,13 +64,14 @@ export function AboutSection() {
                   {profile.about}
                 </Text>
 
-                <Grid columns={{ initial: '1', sm: '3' }} gap="2">
+                <Grid columns={{ initial: '1', sm: '3' }} gap="2" className="about-highlight-grid">
                   {aboutHighlights.map((item) => (
                     <Flex
                       key={item}
                       direction="column"
                       gap="2"
                       p="3"
+                      className="mini-card"
                       style={{
                         border: `1px solid ${colors.teal}55`,
                         borderRadius: 8,

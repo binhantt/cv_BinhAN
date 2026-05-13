@@ -30,7 +30,7 @@ export function Reveal({ children, delay = 0, direction = 'up' }: RevealProps) {
     return () => observer.disconnect()
   }, [])
 
-  const offset = direction === 'left' ? '-34px, 0' : direction === 'right' ? '34px, 0' : '0, 34px'
+  const offset = direction === 'up' ? '0, 34px' : '0, 24px'
 
   return (
     <Box
@@ -40,6 +40,9 @@ export function Reveal({ children, delay = 0, direction = 'up' }: RevealProps) {
         transform: visible ? 'translate3d(0, 0, 0)' : `translate3d(${offset}, 0)`,
         transition: `opacity 720ms ease ${delay}ms, transform 720ms ease ${delay}ms`,
         willChange: 'opacity, transform',
+        width: '100%',
+        maxWidth: '100%',
+        minWidth: 0,
       }}
     >
       {children}

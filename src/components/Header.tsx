@@ -13,7 +13,7 @@ const cvButtonStyle = {
 
 export function Header() {
   const navPills = (
-    <Flex align="center" justify={{ initial: 'start', md: 'center' }} gap="1" wrap="nowrap" style={{ minWidth: 'max-content' }}>
+    <Flex align="center" justify={{ initial: 'start', md: 'center' }} gap="1" wrap="nowrap" className="nav-pills">
       {navItems.map((item) => (
         <a
           key={item.href}
@@ -53,10 +53,10 @@ export function Header() {
             justify="between"
             gap="3"
             direction={{ initial: 'column', md: 'row' }}
-            p="3"
+            p={{ initial: '2', md: '3' }}
             style={{
               ...outerFrameStyle,
-              minHeight: 64,
+              minHeight: 60,
               background: `${colors.amber}f2`,
               backdropFilter: 'blur(16px)',
               boxShadow: `0 18px 48px ${colors.teal}10`,
@@ -68,8 +68,8 @@ export function Header() {
                   align="center"
                   justify="center"
                   style={{
-                    width: 42,
-                    height: 42,
+                    width: 38,
+                    height: 38,
                     flex: '0 0 auto',
                     borderRadius: 8,
                     background: colors.teal,
@@ -81,16 +81,16 @@ export function Header() {
                   <img
                     src="/logo.svg"
                     alt={`${profile.name} logo`}
-                    width="42"
-                    height="42"
+                    width="38"
+                    height="38"
                     style={{ display: 'block', width: '100%', height: '100%' }}
                   />
                 </Flex>
                 <Box style={{ minWidth: 0 }}>
-                  <Text as="div" weight="bold" style={{ color: colors.ink }}>
+                  <Text as="div" weight="bold" size="2" style={{ color: colors.ink }}>
                     {profile.name}
                   </Text>
-                  <Text as="div" size="1" weight="bold" style={{ color: colors.teal }}>
+                  <Text as="div" size="1" weight="bold" style={{ color: colors.teal, fontSize: 12 }}>
                     {profile.role}
                   </Text>
                 </Box>
@@ -107,9 +107,7 @@ export function Header() {
             </Flex>
 
             <Box asChild className="desktop-nav" style={{ flex: 1 }}>
-              <nav aria-label="Main navigation">
-                {navPills}
-              </nav>
+              <nav aria-label="Main navigation">{navPills}</nav>
             </Box>
 
             <Box className="desktop-cv-button">

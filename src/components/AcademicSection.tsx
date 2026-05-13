@@ -29,13 +29,13 @@ export function AcademicSection() {
 
             <Grid columns={{ initial: '1', md: '0.9fr 1.1fr' }} gap="5" align="stretch" width="100%">
               <Reveal direction="left">
-                <Box style={compactVisualStyle}>
+                <Box className="compact-visual" style={compactVisualStyle}>
                   <PortfolioScene variant="academic" />
                 </Box>
               </Reveal>
 
               <Reveal direction="right" delay={120}>
-                <Flex direction="column" gap="4" p={{ initial: '4', sm: '6' }} style={{ ...outerFrameStyle, background: `${colors.teal}10` }}>
+                <Flex direction="column" gap="4" p={{ initial: '4', sm: '6' }} className="content-card" style={{ ...outerFrameStyle, background: `${colors.teal}10` }}>
                 {academics.map((item) => (
                   <Flex key={item.label} align="start" gap="3">
                     <BackpackIcon color={colors.teal} />
@@ -54,7 +54,7 @@ export function AcademicSection() {
                   <Text weight="bold" size="4" style={{ color: colors.ink }}>
                     Tôi đã học gì
                   </Text>
-                  <Flex gap="3" wrap="wrap" mt="3">
+                  <Flex gap="3" wrap="wrap" mt="3" className="topic-list">
                     {learnedTopics.map((topic) => (
                       <Text key={topic} size="2" style={{ color: colors.ink }}>
                         {topic}

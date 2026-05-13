@@ -37,26 +37,30 @@ export function ProjectsSection() {
                     direction="column"
                     gap="4"
                     p="4"
+                    className="project-card"
                     style={{
                       ...outerFrameStyle,
                       background: `${colors.teal}10`,
                     }}
                   >
-                  <Box className="scene-panel">
+                  <Box className="scene-panel" display={{ initial: 'none', md: 'block' }}>
                     <PortfolioScene variant="projectImage" imageUrl={project.imageUrl} />
+                  </Box>
+                  <Box className="project-mobile-image">
+                    <img src={project.imageUrl} alt={project.name} />
                   </Box>
 
                   <Box>
-                    <Heading as="h3" size="5" style={{ color: colors.ink }}>
+                    <Heading as="h3" size="5" className="project-title" style={{ color: colors.ink }}>
                       {project.name}
                     </Heading>
-                    <Text as="div" size="2" mt="1" weight="bold" style={{ color: colors.teal }}>
+                    <Text as="div" size="2" mt="1" weight="bold" className="project-stack" style={{ color: colors.teal }}>
                       {project.stack}
                     </Text>
                     <Text as="p" mt="3" style={{ color: colors.ink, lineHeight: 1.65 }}>
                       {project.detail}
                     </Text>
-                    <Flex gap="2" mt="4" wrap="wrap">
+                    <Flex gap="2" mt="4" wrap="wrap" className="project-actions">
                       {'demoUrl' in project && project.demoUrl ? (
                         <Button size="2" asChild style={{ background: colors.teal, color: colors.amber }}>
                           <a href={project.demoUrl} target="_blank" rel="noreferrer">

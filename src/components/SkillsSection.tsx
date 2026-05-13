@@ -42,6 +42,7 @@ export function SkillsSection() {
                       gap="5"
                       align="center"
                       p={{ initial: '4', sm: '6' }}
+                      className="skill-card"
                       style={{
                         ...outerFrameStyle,
                         background: index === 1 ? `${colors.teal}14` : `${colors.teal}0f`,
@@ -57,12 +58,13 @@ export function SkillsSection() {
                         <Text size="6" weight="bold" style={{ color: colors.ink }}>
                           {group.title}
                         </Text>
-                        <Flex gap="3" wrap="wrap">
+                        <Flex gap="3" wrap="wrap" className="skill-list">
                           {group.items.map((skill) => (
                             <Text
                               key={skill}
                               size="2"
                               weight="bold"
+                              className="skill-pill"
                               style={{
                                 color: colors.teal,
                                 background: `${colors.teal}14`,
