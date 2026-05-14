@@ -15,7 +15,7 @@ export const profile = {
     'Xin chào! Tôi là Bình An, một lập trình viên Frontend đang sinh sống và làm việc tại Thành phố Hồ Chí Minh. Tôi đam mê tạo ra những trải nghiệm web đẹp, rõ ràng và thân thiện với người dùng.',
   objective:
     'Mục tiêu của tôi là phát triển thành Frontend Developer có khả năng xây dựng sản phẩm thực tế, kết nối tốt với backend, tối ưu trải nghiệm người dùng và luôn học hỏi công nghệ mới.',
-  email: 'devbinhan@gmail.com',
+  email: 'dev.dobinhan@gmail.com',
   phone: '0329.104.253',
   location: 'Thành phố Hồ Chí Minh, Việt Nam',
   github: 'https://github.com/binhantt',
