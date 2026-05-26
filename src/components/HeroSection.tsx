@@ -48,13 +48,13 @@ export function HeroSection() {
                   {profile.intro}
                 </Text>
                 <Flex gap="3" mt="4" wrap="wrap">
-                  <Button size="3" asChild style={{ background: colors.teal, color: colors.amber }}>
+                  <Button size="3" asChild className="bg-[#F43F5E] text-[#0F0F0F] shadow-lg shadow-rose-500/20">
                     <a href="#about">
                       Xem hồ sơ
                       <ArrowRightIcon />
                     </a>
                   </Button>
-                  <Button size="3" variant="soft" asChild style={{ color: colors.teal }}>
+                  <Button size="3" variant="soft" asChild className="text-[#F43F5E]">
                     <a href="#projects">Xem dự án</a>
                   </Button>
                 </Flex>

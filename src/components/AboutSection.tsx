@@ -48,7 +48,7 @@ export function AboutSection() {
                   className="content-card about-card"
                   style={{
                     ...outerFrameStyle,
-                    background: `${colors.teal}14`,
+                    background: 'rgba(24, 24, 27, 0.66)',
                   }}
                 >
                 <Flex align="center" gap="3">
@@ -73,9 +73,9 @@ export function AboutSection() {
                       p="3"
                       className="mini-card"
                       style={{
-                        border: `1px solid ${colors.teal}55`,
+                        border: `1px solid ${colors.teal}24`,
                         borderRadius: 8,
-                        background: `${colors.teal}0f`,
+                        background: 'rgba(250, 250, 250, 0.035)',
                       }}
                     >
                       <CheckCircledIcon color={colors.teal} />

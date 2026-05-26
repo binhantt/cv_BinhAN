@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import { ArrowRightIcon, EnvelopeClosedIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Box, Button, Container, Flex, Grid, Heading, Text } from '@radix-ui/themes'
 import { profile } from '../database/portfolio'
 import { colors, compactVisualStyle, kickerStyle, outerFrameStyle, sectionStyle } from '../design'
+import { useSelectedItem } from '../hooks/useSelectedItem'
 import { PortfolioScene } from './PortfolioScene'
 import { Reveal } from './Reveal'
 
@@ -31,7 +31,7 @@ const contactChannels = [
 ]
 
 export function ContactSection() {
-  const [selectedChannel, setSelectedChannel] = useState(contactChannels[0])
+  const { selectedIndex, selectedItem: selectedChannel, selectItem } = useSelectedItem(contactChannels)
 
   return (
     <Box asChild style={sectionStyle}>
@@ -67,7 +67,7 @@ export function ContactSection() {
                   gap="5"
                   p={{ initial: '4', sm: '6' }}
                   className="contact-card"
-                  style={{ ...outerFrameStyle, background: `${colors.teal}10` }}
+                  style={{ ...outerFrameStyle, background: 'rgba(24, 24, 27, 0.64)' }}
                 >
                   <Box>
                     <Text as="div" className="contact-card-title">
@@ -95,12 +95,12 @@ export function ContactSection() {
                   </Flex>
 
                   <Grid columns={{ initial: '1', sm: '3' }} gap="3" className="contact-channel-grid">
-                    {contactChannels.map((item) => (
+                    {contactChannels.map((item, index) => (
                       <button
                         key={item.label}
                         type="button"
-                        className={`contact-channel-card${selectedChannel.label === item.label ? ' is-active' : ''}`}
-                        onClick={() => setSelectedChannel(item)}
+                        className={`contact-channel-card${selectedIndex === index ? ' is-active' : ''}`}
+                        onClick={() => selectItem(index)}
                       >
                         <span className="contact-link-icon">{item.icon ?? item.mark}</span>
                         <span>{item.label}</span>

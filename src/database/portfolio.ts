@@ -1,20 +1,19 @@
 export const profile = {
   name: 'Bình An',
-  role: 'Lập trình viên Frontend',
-  avatarUrl:
-      '/image-removebg-preview.png',
+  role: 'Frontend Developer',
+  avatarUrl: '/image-removebg-preview.png',
   homePhotoUrl: '/image-removebg-preview.png',
   cvImageUrl: '/cv-image.jpg',
   cvUrl: 'https://drive.google.com/file/d/11C4dzqYtXHewVmbw9pjZMxMsLe8x1mLq/view?usp=sharing',
   headline: 'Frontend Developer',
   headlineAccent: 'Bình An Portfolio',
-  eyebrow: 'Sẵn sàng nhận việc  ',
+  eyebrow: 'Sẵn sàng nhận việc',
   intro:
-    'Portfolio cá nhân của Bình An, lập trình viên Frontend yêu thích xây dựng giao diện web đẹp, thân thiện và tương thích trên nhiều thiết bị.',
+    'Mình xây dựng giao diện web gọn, rõ và dễ dùng bằng React, Vue cùng các công cụ frontend hiện đại.',
   about:
-    'Xin chào! Tôi là Bình An, một lập trình viên Frontend đang sinh sống và làm việc tại Thành phố Hồ Chí Minh. Tôi đam mê tạo ra những trải nghiệm web đẹp, rõ ràng và thân thiện với người dùng.',
+    'Xin chào, mình là Bình An, một Frontend Developer tại Thành phố Hồ Chí Minh. Mình thích biến ý tưởng thành giao diện mượt, dễ đọc và thân thiện trên nhiều thiết bị.',
   objective:
-    'Mục tiêu của tôi là phát triển thành Frontend Developer có khả năng xây dựng sản phẩm thực tế, kết nối tốt với backend, tối ưu trải nghiệm người dùng và luôn học hỏi công nghệ mới.',
+    'Mục tiêu của mình là phát triển thành Frontend Developer có khả năng xây dựng sản phẩm thực tế, phối hợp tốt với backend và luôn cải thiện trải nghiệm người dùng.',
   email: 'dev.dobinhan@gmail.com',
   phone: '0329.104.253',
   location: 'Thành phố Hồ Chí Minh, Việt Nam',
@@ -35,7 +34,7 @@ export const navItems = [
 export const skillGroups = [
   {
     title: 'Frontend',
-    items: ['Vue.js', 'React', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap'],
+    items: ['Vue.js', 'React', 'JavaScript', 'HTML5', 'Tailwind CSS', 'Bootstrap'],
   },
   {
     title: 'Backend',
@@ -48,7 +47,7 @@ export const skillGroups = [
 ]
 
 export const academics = [
-  { label: '2021 - Hiện tại', value: 'Đại học Công nghệ TP.HCM (HUTECH)' },
+  { label: '2021 - hiện tại', value: 'Đại học Công nghệ TP.HCM (HUTECH)' },
   { label: 'Ngành học', value: 'Công nghệ Thông tin' },
   { label: 'Trọng tâm', value: 'Lập trình Web, Cơ sở dữ liệu, Phân tích thiết kế hệ thống' },
   { label: 'Tự học', value: 'React, Vue.js, Node.js, UI/UX qua dự án cá nhân' },
@@ -68,7 +67,7 @@ export const projects = [
     name: 'ChatApp Matching Platform',
     stack: 'Next.js, React, NestJS, TypeORM, PostgreSQL, JWT, Socket.IO',
     detail:
-      'Website chat/matching có đăng nhập, hồ sơ người dùng, ghép đôi, nhắn tin real-time, report và khu vực admin moderation.',
+      'Website chat và matching có đăng nhập, hồ sơ người dùng, ghép đôi, nhắn tin real-time, report và khu vực admin moderation.',
     imageUrl: '/chat.png',
     githubUrl: 'https://github.com/binhantt/chat',
   },
@@ -76,7 +75,7 @@ export const projects = [
     name: 'Vue-AnatonLandingPage',
     stack: 'HTML, CSS, JavaScript, Tailwind CSS',
     detail:
-      'Trang landing page giới thiệu sản phẩm với giao diện hiện đại, hiệu ứng chuyển động mượt mà và tương thích trên mọi thiết bị.',
+      'Landing page giới thiệu sản phẩm với giao diện hiện đại, chuyển động mượt và tương thích tốt trên nhiều thiết bị.',
     imageUrl: 'https://binhan.vercel.app/bt.png',
     demoUrl: 'https://binhantt.github.io/Vue-AnatonLandingPage/',
     githubUrl: 'https://github.com/binhantt/Vue-AnatonLandingPage',
@@ -85,7 +84,7 @@ export const projects = [
     name: 'Backend API Service',
     stack: 'Node.js, TypeScript, Express.js, MySQL, JWT, Bcrypt',
     detail:
-      'RESTful API service cung cấp xác thực người dùng và quản lý danh mục. Tích hợp JWT, mã hóa mật khẩu và xác thực captcha.',
+      'RESTful API service cho xác thực người dùng và quản lý danh mục, tích hợp JWT, mã hóa mật khẩu và xác thực captcha.',
     imageUrl: 'https://binhan.vercel.app/sever.png',
     githubUrl: 'https://github.com/binhantt/bankend',
   },
@@ -93,7 +92,7 @@ export const projects = [
     name: 'CV Portfolio Website',
     stack: 'Vue 3, Bootstrap Vue, AOS Animation, Font Awesome',
     detail:
-      'Website CV cá nhân hiện đại với timeline kinh nghiệm, form liên hệ, theme động, hiệu ứng chuyển động và thiết kế responsive.',
+      'Website CV cá nhân với timeline kinh nghiệm, form liên hệ, theme động, hiệu ứng chuyển động và thiết kế responsive.',
     imageUrl: 'https://binhan.vercel.app/cv-portfolio.png',
     demoUrl: 'https://du-an-trang-4rj3uoxuk-binhantts-projects.vercel.app/',
     githubUrl: 'https://github.com/binhantt/du_an_trang-can',
@@ -111,7 +110,7 @@ export const projects = [
     name: 'Nuxt Minimal Starter Website',
     stack: 'Nuxt 3, Vue 3, Vite, Pinia, Bulma',
     detail:
-      'Trang người dùng xây dựng bằng Nuxt 3, hiển thị sản phẩm hot, quản lý thông tin cá nhân và tối ưu SEO.',
+      'Trang người dùng xây bằng Nuxt 3, hiển thị sản phẩm hot, quản lý thông tin cá nhân và tối ưu SEO.',
     imageUrl: 'https://binhan.vercel.app/bai2.png',
     githubUrl: 'https://github.com/binhantt/nuxt-user-page',
   },

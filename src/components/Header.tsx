@@ -8,7 +8,7 @@ const cvButtonStyle = {
   color: colors.amber,
   borderRadius: 8,
   whiteSpace: 'nowrap',
-  boxShadow: `0 12px 28px ${colors.teal}22`,
+  boxShadow: `0 12px 28px ${colors.teal}18`,
 } as const
 
 export function Header() {
@@ -53,14 +53,14 @@ export function Header() {
             justify="between"
             gap="3"
             direction={{ initial: 'column', md: 'row' }}
-            p={{ initial: '2', md: '3' }}
+            p={{ initial: '2', md: '2' }}
             className="header-bar"
             style={{
               ...outerFrameStyle,
-              minHeight: 60,
-              background: `${colors.amber}f2`,
-              backdropFilter: 'blur(16px)',
-              boxShadow: `0 18px 48px ${colors.teal}10`,
+              minHeight: 58,
+              background: 'rgba(9, 9, 11, 0.82)',
+              backdropFilter: 'blur(18px)',
+              boxShadow: `0 18px 48px rgba(0, 0, 0, 0.28)`,
             }}
           >
             <Flex align="center" justify="between" gap="3" style={{ minWidth: 0 }}>
@@ -73,9 +73,10 @@ export function Header() {
                     height: 38,
                     flex: '0 0 auto',
                     borderRadius: 8,
-                    background: colors.teal,
-                    color: colors.amber,
-                    boxShadow: `0 10px 24px ${colors.teal}24`,
+                    background: 'rgba(250, 250, 250, 0.03)',
+                    color: colors.ink,
+                    border: `1px solid ${colors.teal}33`,
+                    boxShadow: `0 10px 24px rgba(0, 0, 0, 0.22)`,
                     overflow: 'hidden',
                   }}
                 >

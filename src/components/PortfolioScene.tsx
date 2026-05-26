@@ -15,7 +15,7 @@ export type SceneVariant =
   | 'skillData'
   | 'contact'
 
-export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; imageUrl?: string }) {
+function usePortfolioScene({ variant, imageUrl }: { variant: SceneVariant; imageUrl?: string }) {
   const mountRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -611,6 +611,12 @@ export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; i
       renderer.dispose()
     }
   }, [variant, imageUrl])
+
+  return mountRef
+}
+
+export function PortfolioScene({ variant, imageUrl }: { variant: SceneVariant; imageUrl?: string }) {
+  const mountRef = usePortfolioScene({ variant, imageUrl })
 
   return <Box ref={mountRef} aria-label={`${variant} 3D visual`} style={{ width: '100%', height: '100%' }} />
 }

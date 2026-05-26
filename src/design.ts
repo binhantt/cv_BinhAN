@@ -1,9 +1,11 @@
 import type { CSSProperties } from 'react'
 
 export const colors = {
-  ink: '#07130d',
-  teal: '#16a34a',
-  amber: '#f7fff8',
+  ink: '#FFF8F8',
+  teal: '#F43F5E',
+  amber: '#0F0F0F',
+  muted: '#A1A1AA',
+  panel: '#18181B',
 }
 
 export const pageStyle: CSSProperties = {
@@ -11,14 +13,14 @@ export const pageStyle: CSSProperties = {
   padding: '0 0 56px',
   color: colors.ink,
   background: `
-    linear-gradient(90deg, rgba(22, 163, 74, 0.07) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(22, 163, 74, 0.06) 1px, transparent 1px),
-    radial-gradient(circle at 14% 16%, ${colors.teal}1c, transparent 30%),
-    radial-gradient(circle at 86% 32%, ${colors.teal}14, transparent 32%),
-    radial-gradient(circle at 50% 92%, ${colors.teal}10, transparent 30%),
+    linear-gradient(90deg, rgba(250, 250, 250, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(250, 250, 250, 0.028) 1px, transparent 1px),
+    radial-gradient(circle at 18% 18%, ${colors.teal}12, transparent 34%),
+    radial-gradient(circle at 86% 28%, rgba(250, 250, 250, 0.05), transparent 30%),
+    radial-gradient(circle at 50% 94%, ${colors.teal}0a, transparent 32%),
     ${colors.amber}
   `,
-  backgroundSize: '72px 72px, 72px 72px, auto, auto, auto, auto',
+  backgroundSize: '96px 96px, 96px 96px, auto, auto, auto, auto',
 }
 
 export const sectionStyle: CSSProperties = {
@@ -30,9 +32,9 @@ export const sectionStyle: CSSProperties = {
 }
 
 export const outerFrameStyle: CSSProperties = {
-  border: `1px solid ${colors.teal}40`,
+  border: `1px solid ${colors.teal}26`,
   borderRadius: 8,
-  background: `${colors.teal}0c`,
+  background: 'rgba(24, 24, 27, 0.62)',
 }
 
 export const visualStyle: CSSProperties = {

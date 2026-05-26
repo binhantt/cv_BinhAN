@@ -35,7 +35,7 @@ export function AcademicSection() {
               </Reveal>
 
               <Reveal direction="right" delay={120}>
-                <Flex direction="column" gap="4" p={{ initial: '4', sm: '6' }} className="content-card" style={{ ...outerFrameStyle, background: `${colors.teal}10` }}>
+                <Flex direction="column" gap="4" p={{ initial: '4', sm: '6' }} className="content-card" style={{ ...outerFrameStyle, background: 'rgba(24, 24, 27, 0.64)' }}>
                 {academics.map((item) => (
                   <Flex key={item.label} align="start" gap="3">
                     <BackpackIcon color={colors.teal} />

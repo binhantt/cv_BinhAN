@@ -40,7 +40,7 @@ export function ProjectsSection() {
                     className="project-card"
                     style={{
                       ...outerFrameStyle,
-                      background: `${colors.teal}10`,
+                      background: 'rgba(24, 24, 27, 0.64)',
                     }}
                   >
                   <Box className="scene-panel" display={{ initial: 'none', md: 'block' }}>
@@ -62,7 +62,7 @@ export function ProjectsSection() {
                     </Text>
                     <Flex gap="2" mt="4" wrap="wrap" className="project-actions">
                       {'demoUrl' in project && project.demoUrl ? (
-                        <Button size="2" asChild style={{ background: colors.teal, color: colors.amber }}>
+                        <Button size="2" asChild className="bg-[#F43F5E] text-[#0F0F0F] shadow-md shadow-rose-500/15">
                           <a href={project.demoUrl} target="_blank" rel="noreferrer">
                             <ExternalLinkIcon />
                             Demo

@@ -45,7 +45,7 @@ export function SkillsSection() {
                       className="skill-card"
                       style={{
                         ...outerFrameStyle,
-                        background: index === 1 ? `${colors.teal}14` : `${colors.teal}0f`,
+                        background: index === 1 ? 'rgba(24, 24, 27, 0.72)' : 'rgba(24, 24, 27, 0.62)',
                       }}
                     >
                       {visualFirst ? (
@@ -67,7 +67,8 @@ export function SkillsSection() {
                               className="skill-pill"
                               style={{
                                 color: colors.teal,
-                                background: `${colors.teal}14`,
+                                background: 'rgba(250, 250, 250, 0.04)',
+                                border: `1px solid ${colors.teal}20`,
                                 borderRadius: 8,
                                 padding: '8px 10px',
                               }}
