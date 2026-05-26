@@ -120,17 +120,6 @@ main .rt-Container {
   position: relative;
 }
 
-.header-bar::after {
-  content: '';
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: -1px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(244, 63, 94, 0.42), transparent);
-  pointer-events: none;
-}
-
 .desktop-cv-button {
   display: block;
 }

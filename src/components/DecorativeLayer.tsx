@@ -3,7 +3,6 @@ import { Box } from '@radix-ui/themes'
 export function DecorativeLayer() {
   return (
     <Box aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-      <Box className="absolute inset-x-6 top-[88px] hidden h-px bg-gradient-to-r from-transparent via-[#F43F5E]/35 to-transparent md:block" />
       <Box className="absolute inset-x-6 bottom-10 hidden h-px bg-gradient-to-r from-transparent via-[#FFF8F8]/10 to-transparent md:block" />
 
       <Box className="absolute left-6 top-[118px] hidden h-[46vh] w-px bg-gradient-to-b from-[#F43F5E]/45 via-[#F43F5E]/10 to-transparent lg:block" />
